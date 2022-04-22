@@ -13,7 +13,6 @@
      cron:
       [
         {
-         _id: 'id',
          id: true,
 
          key: true,
