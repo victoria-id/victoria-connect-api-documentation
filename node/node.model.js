@@ -35,6 +35,6 @@
 
  time:
   {
-   update: { type: Date, default: Date.now, expires: core._.get(core, 'configuration.node.time.expire', 600), index: true },
+   update: { type: Date, required: true, default: Date.now, expires: core._.get(core, 'configuration.node.time.expire', 600), index: true },
   },
 }

@@ -11,7 +11,7 @@
  node:
   [
     {
-     state: { type: String, enum: ['suggested', 'assigned', 'relieved', 'fail', 'success'], default: 'assigned' },
+     state: { type: String, enum: ['suggested', 'assigned', 'relieved', 'fail', 'success'], required: true, default: 'assigned' },
 
      node:
       {
@@ -20,7 +20,7 @@
 
      progress:
       {
-       percent: { type: Number, min: 0, max: 100, default: 0 },
+       percent: { type: Number, min: 0, max: 100, required: true, default: 0 },
       },
 
      exception:
@@ -44,12 +44,12 @@
 { // cron.task
  name: { type: String, required: true },
 
- type: { type: String, enum: ['success', 'fail'], default: 'success' },
- state: { type: String, enum: ['pending', 'pause', 'active', 'skip', 'fail', 'success'], default: 'pending' },
+ type: { type: String, enum: ['success', 'fail'], required: true, default: 'success' },
+ state: { type: String, enum: ['pending', 'pause', 'active', 'skip', 'fail', 'success'], required: true, default: 'pending' },
 
  fault:
   {
-   tolerance: { type: Number, min: 0, max: 100, default: 1 },
+   tolerance: { type: Number, min: 0, max: 100, required: true, default: 1 },
   },
 
  unit:
@@ -84,7 +84,7 @@
 
      time:
       {
-       create: { type: Date, default: Date.now },
+       create: { type: Date, required: true, default: Date.now },
       },
     },
   ],

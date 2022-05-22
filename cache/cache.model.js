@@ -4,6 +4,6 @@
 
  time:
   {
-   expire: { type: Date, default: Date.now, expires: 0, index: true },
+   expire: { type: Date, required: true, default: Date.now, expires: 0, index: true },
   },
 }
